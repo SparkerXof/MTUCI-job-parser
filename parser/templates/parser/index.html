@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container {
+                text-align: center;
+            }
+        </style>
+        <script>
+            function onVacation() {
+                document.getElementById("resumeDiv").style.display = "none";
+                document.getElementById("vacationDiv").style.display = "block";
+            }
+            function onResume() {
+                document.getElementById("resumeDiv").style.display = "block";
+                document.getElementById("vacationDiv").style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Парсер платформ хедхантеров</h1>
+            <form action="{{ type }}" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Подтвердить">
+            </form>
+        </div>
+    </body>
+</html>
