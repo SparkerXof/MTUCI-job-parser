@@ -11,4 +11,4 @@ class VacationModel(models.Model):
     currency = models.CharField(max_length=5, null=True)
     min_experience = models.PositiveIntegerField(null=True)
     max_experience = models.PositiveIntegerField(null=True)
-    work_time = models.CharField(max_length=100)
+    work_time = models.CharField(max_length=100, null=True)

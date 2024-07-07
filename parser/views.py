@@ -12,7 +12,7 @@ def vacations(request):
         form = VacationForm(request.POST)
         if form.is_valid():
             process_vacation_form(form)
-            return HttpResponseRedirect("/result/")
+            return HttpResponseRedirect("/vacations/")
     else:
         form = VacationForm()
     context = {"form": form, "type": "/vacations/"}
